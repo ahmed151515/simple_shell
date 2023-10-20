@@ -75,10 +75,9 @@ int check_continu(char *s, char *env[])
 	{
 		while (env[i] != NULL)
 		{
-			printf("%s",env[i]);
+			printf("%s\n",env[i]);
 			i++;
 		}
-		printf("\n");
 		return (1);
 	}
 	return (0);
