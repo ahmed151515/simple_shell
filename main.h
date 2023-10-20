@@ -14,4 +14,5 @@ char *Find_Path(char *s);
 int combar(char *s1, char *s2);
 void free_cmd(char **cmd);
 int is_spase_line(char *s);
+int check_continu(char *s, char *env[]);
 #endif

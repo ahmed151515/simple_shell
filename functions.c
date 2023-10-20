@@ -51,3 +51,34 @@ int is_spase_line(char *s)
 	}
 	return (1);
 }
+
+/**
+ * check_continu - check
+ * @s: ff
+ * @env: fff
+ * Return: 1 or 0
+ */
+int check_continu(char *s, char *env[])
+{
+	int i = 0;
+
+	if (s == NULL)
+	{
+		return (1);
+	}
+	if (combar(s, "exit\n"))
+	{
+		free(s);
+		exit(0);
+	}
+	if (combar(s, "env\n"))
+	{
+		while (env[i] != NULL)
+		{
+			printf("%s",env[i]);
+			i++;
+		}
+		return (1);
+	}
+	return (0);
+}

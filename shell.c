@@ -3,9 +3,10 @@
  * main - main
  * @ac: num of arg
  * @av: arg
+ * @env:fdf
  * Return: int
  */
-int main(int ac, char *av[])
+int main(int ac, char *av[], char *env[])
 {
 	char *s = NULL;
 	char **cmd = NULL;
@@ -17,10 +18,9 @@ int main(int ac, char *av[])
 	{
 		if (getline(&s, &len, stdin) == -1)
 			break;
-		if (combar(s, "exit\n"))
+		if (check_continu(s, env))
 		{
-			free(s);
-			exit(0);
+			continue;
 		}
 		if (s[0] == '\n' || is_spase_line(s))
 			continue;
