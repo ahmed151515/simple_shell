@@ -6,10 +6,12 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <errno.h>
 char *StrCopy(char *s1);
 char **SetCmd(char *s);
 char *StrCon(char *s1, char *s2);
 char *Find_Path(char *s);
 int combar(char *s1, char *s2);
 void free_cmd(char **cmd);
+
 #endif

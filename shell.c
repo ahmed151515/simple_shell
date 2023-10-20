@@ -30,7 +30,7 @@ int main(int ac, char *av[])
 		if (cmd[0] == NULL)
 		{
 			free_cmd(cmd);
-			printf("%s: No such file or directory\n", av[0]);
+			perror(av[0]);
 			continue;
 		}
 		id = fork();
@@ -39,7 +39,7 @@ int main(int ac, char *av[])
 		if (id  == 0)
 		{
 			execve(cmd[0], cmd, NULL);
-			printf("%s: No such file or directory\n", av[0]);
+			perror(av[0]);
 			return (0);
 		}
 		free_cmd(cmd);
