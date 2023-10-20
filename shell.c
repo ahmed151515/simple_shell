@@ -16,7 +16,6 @@ int main(int ac, char *av[])
 	(void)ac;
 	while (1)
 	{
-		printf("$ ");
 		if (getline(&s, &len, stdin) == -1)
 			break;
 		if (combar(s, "exit\n"))
@@ -46,6 +45,5 @@ int main(int ac, char *av[])
 		free_cmd(cmd);
 	}
 	free(s);
-	printf("\n");
 	return (0);
 }
