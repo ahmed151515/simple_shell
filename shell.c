@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * main - main
  * @ac: num of arg
@@ -23,7 +22,7 @@ int main(int ac, char *av[])
 			free(s);
 			exit(0);
 		}
-		if (s[0] == '\n')
+		if (s[0] == '\n' || is_spase_line(s))
 			continue;
 		cmd = SetCmd(s);
 		cmd[0] = Find_Path(cmd[0]);

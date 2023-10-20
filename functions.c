@@ -32,3 +32,22 @@ int combar(char *s1, char *s2)
 	}
 	return (1);
 }
+/**
+ * is_spase_line - is_spase_line
+ * @s: string
+ * Return: 1 or 0
+ */
+int is_spase_line(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		if (s[i] != ' ' && s[i] != '\n')
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
